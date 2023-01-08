@@ -1,0 +1,70 @@
+\definecolor{haddock}{HTML}{5e5184}
+\definecolor{haddark}{HTML}{514571}
+\definecolor{salt}{HTML}{f0f0f0}
+
+\mode<presentation>{
+  \usetheme{Madrid}      % or try Darmstadt, Madrid, Warsaw, ...
+  \usecolortheme{default} % or try albatross, beaver, crane, ...
+  \usefonttheme{default}  % or try serif, structurebold, ...
+  \setbeamertemplate{navigation symbols}{}
+  \setbeamertemplate{caption}[numbered]
+  \setbeamersize{text margin left=15pt,text margin right=15pt}
+  \setbeamercolor{titlelike}{parent=structure,bg=haddock,fg=salt}
+  \setbeamercolor{background canvas}{bg=white}
+  \usecolortheme[named=haddark]{structure}
+  \setbeamerfont{date}{size=\small}
+  \setbeamertemplate{footline}{
+    \leavevmode%
+    \hbox{%
+        \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+            \usebeamerfont{author in head/foot} Robert Wu (\insertshortinstitute)
+        \end{beamercolorbox}%
+        \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+            \usebeamerfont{title in head/foot}CSC209: SW Tools \& Sys Prog.
+        \end{beamercolorbox}%
+        \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
+            \usebeamerfont{date in head/foot}\insertdate{}\hspace*{2em}
+            \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
+        \end{beamercolorbox}}%
+        \vskip0pt%
+    }
+}
+
+\usepackage[english]{babel}
+% \usepackage[utf8x]{inputenc}
+\usepackage{svg}
+\usepackage{scalerel}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{color}
+\usepackage{subfigure}
+\usepackage{booktabs} % for professional tables
+\usepackage{multicol}
+
+\usepackage{listings}
+\lstset{frame=tb,
+  language=sh,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3,
+  framesep=5pt,
+  showlines=true
+}
+
+% \title[UNIX \& Shell]{UNIX \& Shell Programming}
+\subtitle{CSC209H5: Software Tools \& Systems Programming}
+\author[\href{https://www.cs.toronto.edu/~rupert/}{Robert Wu}]{\href{https://www.cs.toronto.edu/~rupert/}{Robert (Rupert) Wu} \\ [.1cm] \small{rupert.wu@utoronto.ca}}
+\institute[UofT]{\href{https://web.cs.toronto.edu}{Department of Computer Science \\ University of Toronto}}
+\date{2023/01/01}
+% \titlepage

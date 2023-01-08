@@ -1,0 +1,1 @@
+pandoc -f markdown -t beamer --pdf-engine=lualatex -H setup.tex -s lec$1.md -o lec$1.pdf
