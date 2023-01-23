@@ -10,10 +10,12 @@ date: January 16, 2023
 
 ## Today's lesson plan
 
-- Brief review of last week
-- Demos
-  - Rupert's dotfiles
-  - `ssh` configs
-  - `top`/`htop`
-  - Student-requested commands
-- Introduction to C
+1. Brief review of last week
+2. Demos
+
+- Rupert's dotfiles
+- `ssh` configs
+- `top`/`htop`
+- Student-requested commands
+
+3. Introduction to C
