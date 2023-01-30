@@ -38,28 +38,34 @@ printf("%ld\n", B[3]); // 0
 Alternatively, you can directly initialize arrays with values.
 
 - Values in the array beyond the initializer are initialized as `0`.
+
+  ```c
+  int csc209[4] = {2, 0, 9}; // csc209[3] == 0
+  ```
+
 - Due to type inference, the size of such declarations is optional.
 
-```c
-int csc209[4] = {2, 0, 9}; // csc209[3] == 0
-int csc369[] = {3, 6, 9}; // size inferred
-```
+  ```c
+  int csc369[] = {3, 6, 9}; // size inferred
+  ```
 
-## Arrays: Bounds in Memory
+## Arrays: Bounds in Memory ($\rho$)
 
 - C doesn’t require that subscript bounds be checked; if a subscript goes out of range, the program’s behavior is undefined.
-- No run-time checking of array bounds: behaviour exceeding bounds is undefined. The program might...
+- No run-time check of array bounds: behaviour exceeding bounds is undefined. If lucky, it might (appear to) work with no side effects.
 
-  - appear to work with no side effects;
-  - do something random;
-  - crash, maybe even the whole OS :(
+  - Sometimes it'll do something random, harmless or not.
+  - Worst-case, it might crash the program or OS.
 
   ```c
   int csc469 = {2, 2, 0, 8};
-  csc469[4] = 1;    // will probably crash
-                    // maybe stack smashing
+  csc469[4] = 1; // will likely crash with stack smashing
   ```
 
-### Warning
+- **Warning:** It is the programmer’s responsibility to keep track of the size of an array! Take care not to violate the bounds of the array.
 
-It is the programmer’s responsibility to keep track of the size of an array! Take care not to violate the bounds of the array.
+### Arrays: Arnold's Examples
+
+[`[www]/lectures/src/c/arraysVarLength.c`](https://mcs.utm.utoronto.ca/~209/23s/lectures/src/c/arraysVarLength.c)
+
+where `[www]` = [`mcs.utm.utoronto.ca/~209/23s/`](https://mcs.utm.utoronto.ca/~209/23s)
