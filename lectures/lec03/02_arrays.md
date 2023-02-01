@@ -69,3 +69,25 @@ Alternatively, you can directly initialize arrays with values.
 [`[www]/lectures/src/c/arraysVarLength.c`](https://mcs.utm.utoronto.ca/~209/23s/lectures/src/c/arraysVarLength.c)
 
 where `[www]` = [`mcs.utm.utoronto.ca/~209/23s/`](https://mcs.utm.utoronto.ca/~209/23s)
+
+## Variable-Length Arrays
+
+In C99 it’s possible to use a non-constant expression in declare length of arrays. As of C11, it is an optional feature that implementations aren't required to support.
+
+```c
+#include <stdio.h>
+int main(){
+    int i, n;
+    printf("How many numbers do you want to read?");
+    scanf("%d", &n);
+    int a[n]; /* C99 only - length of array depends on n */
+    printf("Enter %d numbers: ", n);
+    for (i = 0; i < n; i++) scanf("%d", &a[i]);
+    return 0;
+}
+```
+
+The array a in this program is an example of a variable-length array (VLA).
+
+- The length of a VLA is determined at runtime, not compile time.
+- One big advantage of a VLA that belongs to a function f is that it can have a different length each time f is called.

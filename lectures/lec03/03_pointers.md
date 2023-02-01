@@ -67,33 +67,27 @@ int main() {
 - Pointers consume less memory than deep copies.
 - Convenient null values for initialization/error-checking.
 
-## Functions: Arguments by Value
+## Pointers: Function Arguments by Value
 
-C passes arguments by value.
+C passes arguments by value. Implicit casting is performed on numerical function arguments; beware of truncation!
 
 ```c
 #include "math.h"
 #include "stdio.h"
-
-long as_int(long i) { return i; }
 int as_long(long l) { return l; }
-double as_double(double f) { return f; }
 float as_float(float d) { return d; }
 
 int main() {
-    int i = 0;
-    long l = __LONG_MAX__ - 1;
-    printf("%d -> %ld\n", i, as_int(i));
-    printf("%ld -> %d\n", l, as_long(l));
-
-    float f = 0.0;
-    double d = M_PI;
-    printf("%1.32f -> %1.32f\n", f, as_double(f));
-    printf("%1.32f -> %1.32f\n", d, as_float(d));
-
+    int nine_plus_ten = 21;
+    long massive = __LONG_MAX__ - nine_plus_ten;
+    printf("%ld -> %d\n", massive, as_int(massive));
+    double pi = M_PI;  // approximate the approximation
+    printf("%1.32f -> %1.32f\n", pi / 2, as_float(pi) / 2);
     return 0;
 }
 ```
+
+Full code: [`[www]/~209/23s/lectures/rupert/w04/arg_cast.c`](https://mcs.utm.utoronto.ca/~209/23s/lectures/rupert/w04//arg_cast.c)
 
 ## Pointers: Function Arguments by Value
 
@@ -190,6 +184,43 @@ The relationship between pointers and arrays in C is a close one. Understanding 
   int *x = &a[0];
   int *y = a;
   ```
+
+## Multidimensional Arrays
+
+Arrays can be multi-dimensional.
+
+```c
+const int Y = 0, R = 1, B = 2, G = 3, O = 4, W = 5;
+int rubiks_face[3][3] = {
+    {Y, Y, R},
+    {W, G, B},
+    {Y, Y, R}};
+```
+
+The name of a two-dimensional array is a pointer to a pointer -- a double pointer. What's the type of the name of a three-dimensional array like `rubiks_cube`?
+
+```c
+int rubiks_cube[6][3][3]; // 6 faces, int ***
+```
+
+For any two-dimensional array `A`, the expression `A[k]` is a pointer to the first element in row `k` of the array.
+
+```c
+int k = 2, *p = rubiks_cube[k];
+for (; p < rubiks_face[k] + 2; p++) *p = O;
+```
+
+## Multidimensional Arrays: Row-Major Order
+
+![row-major order](figures/row-major.jpg){width=50%}
+
+Although we visualize two-dimensional arrays as tables, that’s not the way they’re actually stored in computer memory. C stores arrays in _row-major order_, with row 0 first, then row 1, and so forth.
+
+```c
+int *row_ptr = rubiks_face[0];
+int *square_ptr = &row_ptr[2]; // pointing to rubiks_face[0][2]
+square_ptr++; // pointing to rubiks_face[1][0]
+```
 
 ## Pointers: Arrays as Arguments/Parameters
 
