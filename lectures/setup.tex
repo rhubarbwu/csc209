@@ -1,18 +1,19 @@
 \definecolor{haddock}{HTML}{5e5184}
 \definecolor{haddark}{HTML}{514571}
 \definecolor{salt}{HTML}{f0f0f0}
-
 \mode<presentation>{
   \usetheme{Madrid}      % or try Darmstadt, Madrid, Warsaw, ...
   \usecolortheme{default} % or try albatross, beaver, crane, ...
   \usefonttheme{default}  % or try serif, structurebold, ...
   \setbeamertemplate{navigation symbols}{}
   \setbeamertemplate{caption}[numbered]
-  \setbeamersize{text margin left=15pt,text margin right=15pt}
+  \setbeamersize{text margin left=20pt,text margin right=20pt}
   \setbeamercolor{titlelike}{parent=structure,bg=haddock,fg=salt}
   \setbeamercolor{background canvas}{bg=white}
   \usecolortheme[named=haddark]{structure}
-  \setbeamerfont{date}{size=\small}
+  \setbeamerfont{date}{size=\normalsize}
+  \setbeamerfont{author}{size=\normalsize}
+  \setbeamerfont{institute}{size=\small}
   \setbeamertemplate{footline}{
     \leavevmode%
     \hbox{%
@@ -42,12 +43,14 @@
 \usepackage{subfigure}
 \usepackage{booktabs} % for professional tables
 \usepackage{multicol}
+\usepackage{setspace}
+\setstretch{1.2}
 
 \usepackage{listings}
 \lstset{frame=tb,
   language=sh,
-  aboveskip=3mm,
-  belowskip=3mm,
+  aboveskip=1mm,
+  belowskip=1mm,
   showstringspaces=false,
   columns=flexible,
   basicstyle={\small\ttfamily},

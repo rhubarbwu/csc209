@@ -6,6 +6,7 @@ author:
     [Robert (Rupert) Wu](https://www.cs.toronto.edu/~rupert/)\
     [rupert.wu@utoronto.ca](mailto:rupert.wu@utoronto.ca)
 date: January 9, 2023
+fontsize: 9pt
 ---
 
 ## Acknowledgements
@@ -42,14 +43,14 @@ Thanks to...
 
 It prepares you for:
 
-  - Compilers & Interpreters: CSC488/2107/ECE467, CSCD70
-  - Computer Graphics: CSC317, 417, 419/2520
-  - Computer Networks: CSC358, 457, 458/2209
-  - Information Security: CSC333, 347, 423, 427/ECE568
-  - Operating Systems: CSC369, 469/2208, 2227
-  - Parallel Programming: CSC367/ECE1747, CSC2224/ECE1755
-  - Robotics: CSC376, 476/2606, 477/2630
-  - Software Engineering: CSC301, 302/D01, 309, 409
+- Compilers & Interpreters: CSC488/2107/ECE467, CSCD70
+- Computer Graphics: CSC317, 417, 419/2520
+- Computer Networks: CSC358, 457, 458/2209
+- Information Security: CSC333, 347, 423, 427/ECE568
+- Operating Systems: CSC369, 469/2208, 2227
+- Parallel Programming: CSC367/ECE1747, CSC2224/ECE1755
+- Robotics: CSC376, 476/2606, 477/2630
+- Software Engineering: CSC301, 302/D01, 309, 409
 
 ## CSC209: Prerequisites & Preparation
 

@@ -1,1 +1,0 @@
-pandoc -f markdown -t beamer --pdf-engine=lualatex -H setup.tex --slide-level 2 -s lec$1/*.md -o lec$1.pdf
