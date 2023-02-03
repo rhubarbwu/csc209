@@ -21,7 +21,7 @@ int main() {
 }
 ```
 
-Full code: [`[www]/~209/23s/lectures/rupert/w04/arg_cast.c`](https://mcs.utm.utoronto.ca/~209/23s/lectures/rupert/w04//arg_cast.c)
+Full code: [`mcs.utm.utoronto.ca/~209/23s/lectures/rupert/w04/arg_cast.c`](https://mcs.utm.utoronto.ca/~209/23s/lectures/rupert/w04/arg_cast.c)
 
 ## Functions: Arguments by Value ($\rho$)
 
@@ -172,6 +172,5 @@ The size of an array is not inherently stored in the array itself; the only way 
 
 ### Functions: Arnold's Examples
 
-[`[www]/lectures/src/c/functions/functions.c`](https://mcs.utm.utoronto.ca/~209/23s/lectures/src/c/functions/functions.c)
+[`mcs.utm.utoronto.ca/~209/23s/lectures/src/c/functions/functions.c`](https://mcs.utm.utoronto.ca/~209/23s/lectures/src/c/functions/functions.c)
 
-where `[www]` = [`mcs.utm.utoronto.ca/~209/23s/`](https://mcs.utm.utoronto.ca/~209/23s)

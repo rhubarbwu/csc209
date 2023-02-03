@@ -2,7 +2,7 @@
 
 ## UNIX: What is it? $(\beta)$
 
-![The UNIX Timeline](figures/unix_timeline.svg){width=90%}
+![The UNIX Timeline](figures/unix_timeline.svg){width=80%}
 
 ## UNIX: Philosophy $(\beta)$
 

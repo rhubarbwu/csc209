@@ -10,6 +10,10 @@
 - Local-scope variables are typically allocated memory on the _stack_.
 - Dynamic allocation to the _heap_ is explicitly handled (seen later).
 
+### Expressions: Arnold's Examples
+
+[`mcs.utm.utoronto.ca/~209/23s/lectures/src/c/expressions.c`](https://mcs.utm.utoronto.ca/~209/23s/lectures/src/c/expressions.c)
+
 ## Arrays: Declaration & Allocation
 
 Arrays are sequence of uniformly-sized elements stored in a contiguous region of memory. They're declared to contain types (such as characters or numerics) and an array size between brackets `[size]`.
@@ -66,9 +70,7 @@ Alternatively, you can directly initialize arrays with values.
 
 ### Arrays: Arnold's Examples
 
-[`[www]/lectures/src/c/arraysVarLength.c`](https://mcs.utm.utoronto.ca/~209/23s/lectures/src/c/arraysVarLength.c)
-
-where `[www]` = [`mcs.utm.utoronto.ca/~209/23s/`](https://mcs.utm.utoronto.ca/~209/23s)
+[`mcs.utm.utoronto.ca/~209/23s/lectures/src/c/arraysVarLength.c`](https://mcs.utm.utoronto.ca/~209/23s/lectures/src/c/arraysVarLength.c)
 
 ## Variable-Length Arrays
 

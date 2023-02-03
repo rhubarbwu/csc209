@@ -1,1 +1,0 @@
-# [Arnold's Review: `expressions.c`](https://mcs.utm.utoronto.ca/~209/23s/lectures/src/c/expressions.c)

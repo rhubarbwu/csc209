@@ -87,7 +87,7 @@ int main() {
 }
 ```
 
-Full code: [`[www]/~209/23s/lectures/rupert/w04/arg_cast.c`](https://mcs.utm.utoronto.ca/~209/23s/lectures/rupert/w04//arg_cast.c)
+Full code: [`mcs.utm.utoronto.ca/~209/23s/lectures/rupert/w04/arg_cast.c`](https://mcs.utm.utoronto.ca/~209/23s/lectures/rupert/w04/arg_cast.c)
 
 ## Pointers: Function Arguments by Value
 
@@ -331,3 +331,7 @@ A[3]: addr b49d472c; val 8
 A[4]: addr b49d4730; val 16
 A[5]: addr b49d4734; val 32
 ```
+
+## Pointers & Memory
+
+Arnold's Examples: [`mcs.utm.utoronto.ca/~209/23s/lectures/src/c/memory.c`](https://mcs.utm.utoronto.ca/~209/23s/lectures/src/c/memory.c)

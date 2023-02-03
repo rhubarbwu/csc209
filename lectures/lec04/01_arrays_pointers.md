@@ -66,9 +66,7 @@ Alternatively, you can directly initialize arrays with values.
 
 ### Arrays: Arnold's Examples
 
-[`[www]/lectures/src/c/arraysVarLength.c`](https://mcs.utm.utoronto.ca/~209/23s/lectures/src/c/arraysVarLength.c)
-
-where `[www]` = [`mcs.utm.utoronto.ca/~209/23s/`](https://mcs.utm.utoronto.ca/~209/23s)
+[`mcs.utm.utoronto.ca/~209/23s/lectures/src/c/arraysVarLength.c`](https://mcs.utm.utoronto.ca/~209/23s/lectures/src/c/arraysVarLength.c)
 
 ## Pointers: Arithmetic ($\rho$)
 
@@ -131,7 +129,5 @@ A[5]: addr b49d4734; val 32
 
 ## Pointers: Arnold's Examples
 
-[`[www]/lectures/src/c/crazyPointers.c`](https://mcs.utm.utoronto.ca/~209/23s/lectures/src/c/crazyPointers.c)
-[`[www]/lectures/src/c/pointersAndFunctions.c`](https://mcs.utm.utoronto.ca/~209/23s/lectures/src/c/pointersAndFunctions.c)
-
-where `[www]` = [`mcs.utm.utoronto.ca/~209/23s/`](https://mcs.utm.utoronto.ca/~209/23s)
+[`mcs.utm.utoronto.ca/~209/23s/lectures/src/c/crazyPointers.c`](https://mcs.utm.utoronto.ca/~209/23s/lectures/src/c/crazyPointers.c)
+[`mcs.utm.utoronto.ca/~209/23s/lectures/src/c/pointersAndFunctions.c`](https://mcs.utm.utoronto.ca/~209/23s/lectures/src/c/pointersAndFunctions.c)

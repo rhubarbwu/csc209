@@ -195,7 +195,7 @@ clean:
 
 # Makefiles: Practice
 
-Provided by Karen Reid from CSC209H1 in Fall 2019, supposedly an assignment from an even older offering of CSC209.
+Provided by Karen Reid from my CSC209H1 in Fall 2019, supposedly an assignment from an even older offering of CSC209.
 
 ## Makefiles: Practice (1)
 

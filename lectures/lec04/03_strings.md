@@ -38,8 +38,7 @@ int main() {
 }
 ```
 
-Full code: [`[www]/~209/23s/lectures/rupert/w04/campuses.c`](https://mcs.utm.utoronto.ca/~209/23s/lectures/rupert/w04/campuses.c)
-where `[www]` = [`mcs.utm.utoronto.ca/~209/23s/`](https://mcs.utm.utoronto.ca/~209/23s)
+Full code: [`mcs.utm.utoronto.ca/~209/23s/lectures/rupert/w04/campuses.c`](https://mcs.utm.utoronto.ca/~209/23s/lectures/rupert/w04/campuses.c)
 
 ## Strings: Delicate Arrays
 
@@ -59,5 +58,4 @@ int main() {
 }
 ```
 
-Full code: [`[www]/~209/23s/lectures/rupert/w04/foods.c`](https://mcs.utm.utoronto.ca/~209/23s/lectures/rupert/w04//foods.c)
-where `[www]` = [`mcs.utm.utoronto.ca/~209/23s/`](https://mcs.utm.utoronto.ca/~209/23s)
+Full code: [`mcs.utm.utoronto.ca/~209/23s/lectures/rupert/w04/foods.c`](https://mcs.utm.utoronto.ca/~209/23s/lectures/rupert/w04/foods.c)

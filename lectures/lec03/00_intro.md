@@ -11,12 +11,10 @@ fontsize: 9pt
 
 ## Lesson Plan
 
-1. Arnold's Review: `expressions.c`.
-2. Memory & Arrays
-3. Pointers
-4. Arnold's Example: `memory.c`
-5. File I/O
-6. Housekeeping
+1. Memory & Arrays
+2. Pointers
+3. File I/O
+4. Housekeeping
 
 ### Acknowledgements
 
