@@ -187,7 +187,7 @@ The relationship between pointers and arrays in C is a close one. Understanding 
 
 ## Multidimensional Arrays
 
-Arrays can be multi-dimensional.
+Arrays can be multi-dimensional (N-D) to represent higher dimensional tensors.
 
 ```c
 const int Y = 0, R = 1, B = 2, G = 3, O = 4, W = 5;
@@ -207,12 +207,12 @@ For any two-dimensional array `A`, the expression `A[k]` is a pointer to the fir
 
 ```c
 int k = 2, *p = rubiks_cube[k];
-for (; p < rubiks_face[k] + 2; p++) *p = O;
+for (; p < rubiks_face[k] + 2; p++) *p = Y;
 ```
 
 ## Multidimensional Arrays: Row-Major Order
 
-![row-major order](figures/row-major.jpg){width=50%}
+![row-major order of a 3x3 matrix](figures/row-major.jpg){width=50%}
 
 Although we visualize two-dimensional arrays as tables, that’s not the way they’re actually stored in computer memory. C stores arrays in _row-major order_, with row 0 first, then row 1, and so forth.
 
