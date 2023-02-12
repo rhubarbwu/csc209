@@ -312,35 +312,58 @@ Try drawing the memory model of the following code.
 #include "stdio.h"
 #include "stdlib.h"
 void init(int *a1, int *a2, int n) {
-    for (int i = 0; i < n; i++) { a1[i] = i; a2[i] = i; }
+    for (int i = 0; i < n; i++) { a1[i] = i; a2[i] = 2*i+1; }
 }
 int main() {
     int nums1[3], *nums2 = malloc(sizeof(int) * 3);
-    init(nums1, nums2, 3);
+    init(nums1, nums2, 2);
     for (int i = 0; i < 3; i++) printf("%d %d\n", nums1[i], nums2[i]);
     free(nums2);
-    return 0;
-}
+    return 0; }
 ```
 
 - Heap: `0x23c` to `0x248`.
 - Stack for `init`: `0x454` to `0x470`.
 - Stack for `main`: `0x474` to `0x48c`.
+- Let `??` represent garbage.
+
+---
+
+| Section            | Address | Value | Variable |
+| ------------------ | ------- | ----- | -------- |
+| Heap               | `0x23c` |       |          |
+|                    | `0x240` |       |          |
+|                    | `0x244` |       |          |
+| ...                |         |       |          |
+| Stack frame `init` | `0x454` |       |          |
+|                    | `0x458` |       |          |
+|                    | `0x45c` |       |          |
+|                    | `0x460` |       |          |
+|                    | `0x464` |       |          |
+|                    | `0x468` |       |          |
+|                    | `0x46c` |       |          |
+|                    | `0x470` |       |          |
+| Stack frame `main` | `0x474` |       |          |
+|                    | `0x478` |       |          |
+|                    | `0x47c` |       |          |
+|                    | `0x480` |       |          |
+|                    | `0x484` |       |          |
+|                    | `0x488` |       |          |
 
 ---
 
 | Section            | Address | Value                          | Variable   |
 | ------------------ | ------- | ------------------------------ | ---------- |
-| Heap               | `0x23c` | `0`                            |            |
-|                    | `0x240` | `1`                            |            |
-|                    | `0x244` | `2`                            |            |
+| Heap               | `0x23c` | `1`                            |            |
+|                    | `0x240` | `3`                            |            |
+|                    | `0x244` | `??`                           |            |
 | ...                |         |                                |            |
 | Stack frame `init` | `0x454` | `0x474`                        | `a1`       |
 |                    | `0x458` | `0x474`                        | `a1`       |
 |                    | `0x45c` | `0x23c`                        | `a2`       |
 |                    | `0x460` | `0x23c`                        | `a2`       |
-|                    | `0x464` | `3`                            | `n`        |
-|                    | `0x468` | ~~`0`~~, ~~`1`~~, ~~`2`~~, `3` | `i`        |
+|                    | `0x464` | `2`                            | `n`        |
+|                    | `0x468` | ~~`0`~~, ~~`1`~~, `2`          | `i`        |
 |                    | `0x46c` |                                |            |
 |                    | `0x470` |                                |            |
 | Stack frame `main` | `0x474` | `0`                            | `nums1[0]` |

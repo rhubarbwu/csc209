@@ -141,18 +141,18 @@ double area(Box b) {
 }
 ```
 
-## Structures: Linked-Lists
+## Structures: Linked-Lists: A Taster
 
-A very common data structure that maintains ordering with easy insertions/deletions is the linked-list (LL).
+A very common data structure that maintains ordering with easy insertions/deletions is the linked-list (LL). Here's a sample `struct` implementation.
 
 ```c
 typedef struct llnode {
 	struct llnode * next;
 	int data;
-} llnode;
+} LLNode;
 ```
 
-Each `llnode` holds a pointer to another `llnode`, so it allows `llnode` to refer to each other. More next week...
+Each `LLNode` holds a pointer `next` to another `LLNode`, so they can refer to each other. More next week...
 
 ### Arnold's Code
 
