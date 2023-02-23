@@ -153,8 +153,6 @@ gcc -o fr fr.o greet.c  # link French binary
 ./fr                    # run French binary
 ```
 
-[`mcs.utm.utoronto.ca/~209/23s/lectures`](https://mcs.utm.utoronto.ca/~209/23s/lectures)
-
 ### Compilation: Arnold's Examples
 
 [`mcs.utm.utoronto.ca/~209/23s/lectures/src/c/logistics.zip`](https://mcs.utm.utoronto.ca/~209/23s/lectures/src/c/logistics.zip)

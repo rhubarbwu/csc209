@@ -9,7 +9,6 @@ C passes arguments by value. Implicit casting is performed on numerical function
 #include "stdio.h"
 int as_long(long l) { return l; }
 float as_float(float d) { return d; }
-
 int main() {
     int nine_plus_ten = 21;
     long massive = __LONG_MAX__ - nine_plus_ten;
@@ -173,4 +172,3 @@ The size of an array is not inherently stored in the array itself; the only way 
 ### Functions: Arnold's Examples
 
 [`mcs.utm.utoronto.ca/~209/23s/lectures/src/c/functions/functions.c`](https://mcs.utm.utoronto.ca/~209/23s/lectures/src/c/functions/functions.c)
-

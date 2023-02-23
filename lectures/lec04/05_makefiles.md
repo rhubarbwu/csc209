@@ -16,7 +16,8 @@ Now, suppose we are writing a language translation program that uses an intermed
   char *decode(int *ir);
   ```
 - And that `main()` could call either of these at will.
-- How would you design and build this?
+
+How would you design and build this?
 
 ## Automation with Scripts
 
