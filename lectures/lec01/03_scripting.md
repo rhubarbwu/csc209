@@ -149,7 +149,7 @@ Interpreters such as shells can be specified with shebang `#!` at the top of the
 
 ```sh
 #!/usr/bin/dash
-echo this is dash
+$ echo this is dash
 ```
 
 You can do the same with Python.

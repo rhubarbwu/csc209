@@ -50,10 +50,9 @@ Source: [`sourceware.org/gdb/`](https://sourceware.org/gdb/)
 Firstly, include the `-g` flag in `gcc/clang`. And then prepend `gdb` to the command.
 
 ```sh
-gcc -g -o main main.c
-
-gdb ./main # run a simple command
-gdb --args ./main arg1 arg2 ... # run with arguments to main
+$ gcc -g -o main main.c # compile with -g
+$ gdb ./main # run a simple command
+$ gdb --args ./main arg1 arg2 ... # run with arguments to main
 ```
 
 ### Breakpoints & Run
@@ -103,16 +102,16 @@ Try debugging `minigrep.c` to fix it!
 
 ```sh
 # gdb is enabled in some other compilers too!
-clang -g -o minigrep minigrep.c
+$ clang -g -o minigrep minigrep.c
 # debug in searching for while loops or macros
-gdb --args minigrep minigrep.c while
-gdb --args minigrep minigrep.c \#define
+$ gdb --args minigrep minigrep.c while
+$ gdb --args minigrep minigrep.c \#define
 ```
 
 - What breakpoints might be interesting?
 - Which variables/expressions?
 
-Full code: [`mcs.utm.utoronto.ca/~209/23s/lectures/rupert/w06/minigrep.c`](https://mcs.utm.utoronto.ca/~209/23s/lectures/rupert/w06/minigrep.c)
+Full code: [`raw.githubusercontent.com/rhubarbwu/csc209/master/lectures/lec06/minigrep.c`](https://raw.githubusercontent.com/rhubarbwu/csc209/master/lectures/lec06/minigrep.c)
 
 ## GDB: Additional Info
 
@@ -125,16 +124,16 @@ Try debugging `minigrep.c` to fix it!
 
 ```sh
 # gdb is enabled in some other compilers too!
-clang -g -o minigrep minigrep.c
+$ clang -g -o minigrep minigrep.c
 # debug in searching for while loops or macros
-gdb --args minigrep minigrep.c while
-gdb --args minigrep minigrep.c \#define
+$ gdb --args minigrep minigrep.c while
+$ gdb --args minigrep minigrep.c \#define
 ```
 
 - What breakpoints might be interesting? `break 18`, `break 29`.
 - Which variables/expressions? At `29`: `line`, `line+i`, `pattern` and/or `result`.
 
-Full code: [`mcs.utm.utoronto.ca/~209/23s/lectures/rupert/w06/minigrep.c`](https://mcs.utm.utoronto.ca/~209/23s/lectures/rupert/w06/minigrep.c)
+Full code: [`raw.githubusercontent.com/rhubarbwu/csc209/master/lectures/lec06/minigrep.c`](https://raw.githubusercontent.com/rhubarbwu/csc209/master/lectures/lec06/minigrep.c)
 
 ## Valgrind: What is it?
 
@@ -235,9 +234,9 @@ Source: [`valgrind.org/docs/manual/quick-start.html`](https://valgrind.org/docs/
 Because using `-g` to enable `gdb` (and others) adds debugging information to the application in the end, the binary will be larger and less efficient.
 
 ```sh
-gcc -o example example.c
-gcc -g -o example-g example.c
-wc -l example example-g && du -h example example-g
+$ gcc -o example example.c
+$ gcc -g -o example-g example.c
+$ wc -l example example-g && du -h example example-g
 ```
 
 - You can use `wc -l` or `du -h` to count number of lines or bytes a binary takes up.
@@ -252,4 +251,4 @@ Conversely, the more optimization you include (`-O1`, `-O2`, `-O3`, etc.), the l
 
 ### Example: Leaky Linked-List
 
-Full code: [`mcs.utm.utoronto.ca/~209/23s/lectures/rupert/w06/leakyll.c`](https://mcs.utm.utoronto.ca/~209/23s/lectures/rupert/w06/leakyll.c)
+Full code: [`raw.githubusercontent.com/rhubarbwu/csc209/master/lectures/lec06/leakyll.c`](https://raw.githubusercontent.com/rhubarbwu/csc209/master/lectures/lec06/leakyll.c)

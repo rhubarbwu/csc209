@@ -233,7 +233,7 @@ From `man 2 sigaction`:
 
 ### Happy Birthday Example (Adapted from Karen's)
 
-[`mcs.utm.utoronto.ca/~209/23s/lectures/rupert/w07/birthday.c`](https://mcs.utm.utoronto.ca/~209/23s/lectures/rupert/w07/birthday.c)
+[`raw.githubusercontent.com/rhubarbwu/csc209/master/lectures/lec07/birthday.c`](https://raw.githubusercontent.com/rhubarbwu/csc209/master/lectures/lec07/birthday.c)
 
 - Try uncommenting both `sigaction` calls.
   - You might notice you're stuck!
@@ -252,7 +252,7 @@ From `man 7 signal-safety`:
 
 ### Happy Birthday Example (Adapted from Karen's)
 
-[`mcs.utm.utoronto.ca/~209/23s/lectures/rupert/w07/birthday.c`](https://mcs.utm.utoronto.ca/~209/23s/lectures/rupert/w07/birthday.c)
+[`raw.githubusercontent.com/rhubarbwu/csc209/master/lectures/lec07/birthday.c`](https://raw.githubusercontent.com/rhubarbwu/csc209/master/lectures/lec07/birthday.c)
 
 - Uncomment the `printf` and `sleep` calls in the infinite loop.
 

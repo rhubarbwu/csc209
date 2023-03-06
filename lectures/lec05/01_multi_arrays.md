@@ -77,8 +77,8 @@ for (int i = 0; i < 3; i++) printf("%d\n", *(rect[i] + 3));
 for (int j = 0; j < 4; j++) printf("%d ", (*rect[1] + j));
 ```
 
-Full code: [`mcs.utm.utoronto.ca/~209/23s/lectures/rupert/w05/traversal.c`](https://mcs.utm.utoronto.ca/~209/23s/lectures/rupert/w05/traversal.c)
+Full code: [`raw.githubusercontent.com/rhubarbwu/csc209/master/lectures/lec05/traversal.c`](https://raw.githubusercontent.com/rhubarbwu/csc209/master/lectures/lec05/traversal.c)
 
 ### Traversing in an Arbitrary Order
 
-Example: [`mcs.utm.utoronto.ca/~209/23s/lectures/rupert/w05/3to3.c`](https://mcs.utm.utoronto.ca/~209/23s/lectures/rupert/w05/3to3.c)
+Example: [`raw.githubusercontent.com/rhubarbwu/csc209/master/lectures/lec05/3to3.c`](https://raw.githubusercontent.com/rhubarbwu/csc209/master/lectures/lec05/3to3.c)

@@ -134,7 +134,7 @@ $
 - Use `>` to _redirect_ `stdout`, and `2>` to redirect `stderr`
   - `>` overwrites the output file, `>>` appends
   ```sh
-  ls >myfiles.txt
+  $ ls >myfiles.txt
   ```
 
 [`linux.die.net/Intro-Linux/sect_05_01.html`](https://linux.die.net/Intro-Linux/sect_05_01.html)
@@ -143,15 +143,15 @@ $
 
 - _Pipes_ transfer output from one process to another
   ```sh
-  ls | grep "pdf"
+  $ ls | grep "pdf"
   ```
 - _Input redirection_ transfers the contents of a file into `stdin` of a process
   ```sh
-  wc <essay.txt
+  $ wc <essay.txt
   ```
 - _Process substitution_ creates a _temporary file_ to transfer the output from one or more processes to `stdin` of another process
   ```sh
-  wc <(ls) or wc <(ls | grep "pdf")
+  $ wc <(ls) or wc <(ls | grep "pdf")
   ```
 
 [`http://tldp.org/LDP/abs/html/process-sub.html`](http://tldp.org/LDP/abs/html/process-sub.html)

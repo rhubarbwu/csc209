@@ -234,10 +234,10 @@ gets(buf); // unsafe: accepts infinite stream
 Let's implement a miniature version of `grep` called `minigrep`. It'll simply search for lines matching `pattern` and print out match positions. More precisely, for each `line` in your `file`, our implementation will see if there exists some `size_t i` such that `strcmp(line+i, pattern)`. No flags, and exactly a `filename` and `pattern` are provided as arguments. Compile and run it on its own source code:
 
 ```sh
-gcc -o minigrep minigrep.c
-minigrep minigrep.c \#define
+$ gcc -o minigrep minigrep.c
+$ minigrep minigrep.c \#define
 ```
 
 You'll find that the given code doesn't actually work! Replace `strcmp` with `strncmp` if the `line` is expected to be longer than `pattern`.
 
-Full code: [`mcs.utm.utoronto.ca/~209/23s/lectures/rupert/w06/minigrep.c`](https://mcs.utm.utoronto.ca/~209/23s/lectures/rupert/w06/minigrep.c)
+Full code: [`raw.githubusercontent.com/rhubarbwu/csc209/master/lectures/lec06/minigrep.c`](https://raw.githubusercontent.com/rhubarbwu/csc209/master/lectures/lec06/minigrep.c)
