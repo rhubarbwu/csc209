@@ -33,8 +33,8 @@ Preprocessing...
 You can emit preprocessed code with `gcc -E`.
 
 ```sh
-gcc -E foods.c
-gcc -dM -E foods.c # includes pre-defined macros
+$ gcc -E foods.c
+$ gcc -dM -E foods.c # includes pre-defined macros
 ```
 
 ## Compilation: Separate Compilation

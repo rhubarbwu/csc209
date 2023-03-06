@@ -20,7 +20,7 @@ int main() {
 }
 ```
 
-Full code: [`mcs.utm.utoronto.ca/~209/23s/lectures/rupert/w04/arg_cast.c`](https://mcs.utm.utoronto.ca/~209/23s/lectures/rupert/w04/arg_cast.c)
+Full code: [`raw.githubusercontent.com/rhubarbwu/csc209/master/lectures/lec04/arg_cast.c`](https://raw.githubusercontent.com/rhubarbwu/csc209/master/lectures/lec04/arg_cast.c)
 
 ## Functions: Arguments by Value ($\rho$)
 

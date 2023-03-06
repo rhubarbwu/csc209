@@ -40,7 +40,7 @@ gcc -o ar-zh ar-e.c zh-d.c main.c
 We might want to write a script/function to generalize...
 
 ```sh
-gcc -o $1-$2 $1-e.c $2-d.c.
+$ gcc -o $1-$2 $1-e.c $2-d.c.
 ```
 
 ## Automation with Scripts
