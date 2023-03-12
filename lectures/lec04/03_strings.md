@@ -38,7 +38,9 @@ int main() {
 }
 ```
 
-Full code: [`raw.githubusercontent.com/rhubarbwu/csc209/master/lectures/lec04/campuses.c`](https://raw.githubusercontent.com/rhubarbwu/csc209/master/lectures/lec04/campuses.c)
+### Full code
+
+[`github.com/rhubarbwu/csc209/blob/master/lectures/lec04/campuses.c`](https://github.com/rhubarbwu/csc209/blob/master/lectures/lec04/campuses.c)
 
 ## Strings: Delicate Arrays
 
@@ -58,4 +60,6 @@ int main() {
 }
 ```
 
-Full code: [`raw.githubusercontent.com/rhubarbwu/csc209/master/lectures/lec04/foods.c`](https://raw.githubusercontent.com/rhubarbwu/csc209/master/lectures/lec04/foods.c)
+### Full code
+
+[`github.com/rhubarbwu/csc209/blob/master/lectures/lec04/foods.c`](https://github.com/rhubarbwu/csc209/blob/master/lectures/lec04/foods.c)

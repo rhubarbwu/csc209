@@ -240,4 +240,6 @@ $ minigrep minigrep.c \#define
 
 You'll find that the given code doesn't actually work! Replace `strcmp` with `strncmp` if the `line` is expected to be longer than `pattern`.
 
-Full code: [`raw.githubusercontent.com/rhubarbwu/csc209/master/lectures/lec06/minigrep.c`](https://raw.githubusercontent.com/rhubarbwu/csc209/master/lectures/lec06/minigrep.c)
+### Full code
+
+[`github.com/rhubarbwu/csc209/blob/master/lectures/lec06/minigrep.c`](https://github.com/rhubarbwu/csc209/blob/master/lectures/lec06/minigrep.c)

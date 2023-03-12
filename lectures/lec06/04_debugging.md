@@ -111,7 +111,7 @@ $ gdb --args minigrep minigrep.c \#define
 - What breakpoints might be interesting?
 - Which variables/expressions?
 
-Full code: [`raw.githubusercontent.com/rhubarbwu/csc209/master/lectures/lec06/minigrep.c`](https://raw.githubusercontent.com/rhubarbwu/csc209/master/lectures/lec06/minigrep.c)
+Full code: [`github.com/rhubarbwu/csc209/blob/master/lectures/lec06/minigrep.c`](https://github.com/rhubarbwu/csc209/blob/master/lectures/lec06/minigrep.c)
 
 ## GDB: Additional Info
 
@@ -133,7 +133,7 @@ $ gdb --args minigrep minigrep.c \#define
 - What breakpoints might be interesting? `break 18`, `break 29`.
 - Which variables/expressions? At `29`: `line`, `line+i`, `pattern` and/or `result`.
 
-Full code: [`raw.githubusercontent.com/rhubarbwu/csc209/master/lectures/lec06/minigrep.c`](https://raw.githubusercontent.com/rhubarbwu/csc209/master/lectures/lec06/minigrep.c)
+Full code: [`github.com/rhubarbwu/csc209/blob/master/lectures/lec06/minigrep.c`](https://github.com/rhubarbwu/csc209/blob/master/lectures/lec06/minigrep.c)
 
 ## Valgrind: What is it?
 
@@ -251,4 +251,4 @@ Conversely, the more optimization you include (`-O1`, `-O2`, `-O3`, etc.), the l
 
 ### Example: Leaky Linked-List
 
-Full code: [`raw.githubusercontent.com/rhubarbwu/csc209/master/lectures/lec06/leakyll.c`](https://raw.githubusercontent.com/rhubarbwu/csc209/master/lectures/lec06/leakyll.c)
+Full code: [`github.com/rhubarbwu/csc209/blob/master/lectures/lec06/leakyll.c`](https://github.com/rhubarbwu/csc209/blob/master/lectures/lec06/leakyll.c)
