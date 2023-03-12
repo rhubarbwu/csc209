@@ -162,11 +162,8 @@ Signals are useful, but there are some drawbacks.
 ### Queuing
 
 - Multiple instances of the same signal do not queue.
-- If signal `X` is sent while a previously-sent signal `X` is pending,
-  then the second `X` is lost.
-- Example, if your process receives a `SIGCHLD` (Child stopped
-  or terminated), it may be that only one child process has terminated,
-  or that _multiple_ child processes have terminated.
+- If signal `Y` is sent while a previously-sent signal `X` is pending, then the second `Y` is lost.
+- Example, if your process receives a `SIGCHLD` (Child stopped or terminated), it may be that only one child process has terminated, or that _multiple_ child processes have terminated.
 
 ## Aside: Types and Portability
 
@@ -233,7 +230,7 @@ From `man 2 sigaction`:
 
 ### Happy Birthday Example (Adapted from Karen's)
 
-[`raw.githubusercontent.com/rhubarbwu/csc209/master/lectures/lec07/birthday.c`](https://raw.githubusercontent.com/rhubarbwu/csc209/master/lectures/lec07/birthday.c)
+[`github.com/rhubarbwu/csc209/blob/master/lectures/lec07/birthday.c`](https://github.com/rhubarbwu/csc209/blob/master/lectures/lec07/birthday.c)
 
 - Try uncommenting both `sigaction` calls.
   - You might notice you're stuck!
@@ -252,7 +249,7 @@ From `man 7 signal-safety`:
 
 ### Happy Birthday Example (Adapted from Karen's)
 
-[`raw.githubusercontent.com/rhubarbwu/csc209/master/lectures/lec07/birthday.c`](https://raw.githubusercontent.com/rhubarbwu/csc209/master/lectures/lec07/birthday.c)
+[`github.com/rhubarbwu/csc209/blob/master/lectures/lec07/birthday.c`](https://github.com/rhubarbwu/csc209/blob/master/lectures/lec07/birthday.c)
 
 - Uncomment the `printf` and `sleep` calls in the infinite loop.
 

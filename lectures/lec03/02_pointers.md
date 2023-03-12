@@ -87,7 +87,9 @@ int main() {
 }
 ```
 
-Full code: [`raw.githubusercontent.com/rhubarbwu/csc209/master/lectures/lec04/arg_cast.c`](https://raw.githubusercontent.com/rhubarbwu/csc209/master/lectures/lec04/arg_cast.c)
+### Full code
+
+[`github.com/rhubarbwu/csc209/blob/master/lectures/lec04/arg_cast.c`](https://github.com/rhubarbwu/csc209/blob/master/lectures/lec04/arg_cast.c)
 
 ## Pointers: Function Arguments by Value
 
