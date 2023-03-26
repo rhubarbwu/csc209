@@ -1,11 +1,11 @@
 SCP_ADDRESS=
 
-all : lec01.pdf lec02.pdf lec03.pdf lec04.pdf lec05.pdf lec06.pdf lec07.pdf lec08.pdf lec09.pdf lec10.pdf
+all : lec01.pdf lec02.pdf lec03.pdf lec04.pdf lec05.pdf lec06.pdf lec07.pdf lec08.pdf lec09.pdf lec10.pdf lec11.pdf
 
 %.up : %.pdf
 	scp $< ${SCP_ADDRESS}
 
-up : lec01.pdf lec02.pdf lec03.pdf lec04.pdf lec05.pdf lec06.pdf lec07.pdf lec08.pdf lec09.pdf lec10.pdf
+up : lec01.pdf lec02.pdf lec03.pdf lec04.pdf lec05.pdf lec06.pdf lec07.pdf lec08.pdf lec09.pdf lec10.pdf lec11.pdf
 	scp $^ ${SCP_ADDRESS}
 
 %.pdf : %/*.md
