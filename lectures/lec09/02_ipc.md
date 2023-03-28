@@ -2,7 +2,7 @@
 
 Recall that upon calling `fork()` the child process gets a copy of the parent process' file descriptor (FD) table. So if a pipe is created before the fork, the child process after the fact also has access to the pipe.
 
-![`exec*()`](figures/exec.png){width=90%}
+![`exec*()`](lec08/exec.png){width=90%}
 
 While `exec*()` doesn't create new processes, the same FD table is retained after the program is replaced (important because `fork()` and `exec*()` are often used together).
 

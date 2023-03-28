@@ -18,15 +18,15 @@ Static code analyzers parse through source code and libraries to ensure that typ
 
 ## Why Use a Debugger?
 
-![admit it, we all do this](figures/debugging-drake.png){width=72%}
+![admit it, we all do this](lec06/debugging-drake.png){width=72%}
 
 ## Why Use a Debugger?
 
-![debugging can be time-consuming](figures/debugging-everyday.png){width=60%}
+![debugging can be time-consuming](lec06/debugging-everyday.png){width=60%}
 
 ## Why Use a Debugger?
 
-![sometimes you actually want to understand](figures/debugging-why.png){width=53%}
+![sometimes you actually want to understand](lec06/debugging-why.png){width=53%}
 
 ## GDB: The GNU Project Debugger
 
@@ -111,6 +111,8 @@ $ gdb --args minigrep minigrep.c \#define
 - What breakpoints might be interesting?
 - Which variables/expressions?
 
+/small
+
 Full code: [`github.com/rhubarbwu/csc209/blob/master/lectures/lec06/minigrep.c`](https://github.com/rhubarbwu/csc209/blob/master/lectures/lec06/minigrep.c)
 
 ## GDB: Additional Info
@@ -133,11 +135,13 @@ $ gdb --args minigrep minigrep.c \#define
 - What breakpoints might be interesting? `break 18`, `break 29`.
 - Which variables/expressions? At `29`: `line`, `line+i`, `pattern` and/or `result`.
 
+/small
+
 Full code: [`github.com/rhubarbwu/csc209/blob/master/lectures/lec06/minigrep.c`](https://github.com/rhubarbwu/csc209/blob/master/lectures/lec06/minigrep.c)
 
 ## Valgrind: What is it?
 
-![Depiction of Saint George and the dragon.](figures/st-george-dragon.png){width=60%}
+![Depiction of Saint George and the dragon.](lec06/st-george-dragon.png){width=60%}
 
 Valgrind is an instrumentation framework for building dynamic analysis tools. There are Valgrind tools that can automatically detect many memory management and threading bugs, and profile your programs in detail. You can also use Valgrind to build new tools.
 
@@ -145,7 +149,7 @@ Source: [`valgrind.org/`](https://valgrind.org/)
 
 ## Valgrind: What Kinds of Build Tools?
 
-![Relevance? Look up the green/red/purple "dragon book".](figures/st-george-dragon.png){width=38%}
+![Relevance? Look up the green/red/purple "dragon book".](lec06/st-george-dragon.png){width=38%}
 
 The Valgrind distribution currently includes seven production-quality tools:
 
@@ -250,5 +254,7 @@ Debugging is for the purpose of correctness, which is the most important thing.
 Conversely, the more optimization you include (`-O1`, `-O2`, `-O3`, etc.), the less helpful or reliable valgrind and other tools can become (especially for complex programs).
 
 ### Example: Leaky Linked-List
+
+/small
 
 Full code: [`github.com/rhubarbwu/csc209/blob/master/lectures/lec06/leakyll.c`](https://github.com/rhubarbwu/csc209/blob/master/lectures/lec06/leakyll.c)

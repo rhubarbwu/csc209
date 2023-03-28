@@ -2,7 +2,7 @@
 
 ## UNIX: What is it? $(\beta)$
 
-![The UNIX Timeline](figures/unix_timeline.svg){width=80%}
+![The UNIX Timeline](lec01/unix_timeline.svg){width=80%}
 
 ## UNIX: Philosophy $(\beta)$
 
@@ -71,7 +71,7 @@ In actuality, files have absolute paths stemming from the root.
 
 ## Files: Permissions ($\beta$)
 
-![file permissions](figures/file_perms.svg)
+![file permissions](lec01/file_perms.svg)
 
 - Each file has a permission string, e.g., `rw-r-xr-x`
   - First column: `d` (directory), `l` (link), or `-` (regular file)

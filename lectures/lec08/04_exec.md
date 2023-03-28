@@ -5,7 +5,7 @@
 The `exec` functions (provided by `unistd.h`) load a new program into the current process image. The process
 retains its original PID.
 
-![`exec*()`](figures/exec.png)
+![`exec*()`](lec08/exec.png)
 
 ## `exec`: The Basic `execve`
 
@@ -82,8 +82,8 @@ The characters in the function name `exec*` can be informative.
 Because this is C, there are some safety/security implications programmers should consider. Using `execlp` and `execvp` can be very dangerous
 when used improperly.
 
-![`exec*()`](figures/fry.jpg){width=41%}
-![`exec*()`](figures/doubt.jpg){width=55%}
+![`exec*()`](lec08/fry.jpg){width=41%}
+![`exec*()`](lec08/doubt.jpg){width=55%}
 
 Why? What makes these two special?
 

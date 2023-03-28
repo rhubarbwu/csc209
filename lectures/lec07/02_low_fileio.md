@@ -2,7 +2,7 @@
 
 ## File I/O: File Descriptors
 
-![Example of FDs pointing to inodes.](figures/file-descriptor.jpg){width=80%}
+![Example of FDs pointing to inodes.](lec03/file-descriptor.jpg){width=80%}
 
 A file descriptor (FD) is a number (non-negative integer) that uniquely identifies an open file in a computer's operating system. It describes a data resource, and how that resource may be accessed.
 
@@ -99,13 +99,13 @@ while (len != 0 && (ret = read(fd, buf, len)) != 0) {
 
 As before, we use _file descriptors (FDs)_, serving as indices for open files.
 
-![from [`tinf2.vub.ac.be/~dvermeir/manuals/uintro/uintro.html`](https://tinf2.vub.ac.be/~dvermeir/manuals/uintro/uintro.html)](figures/filetable.gif){width=80%}
+![from [`tinf2.vub.ac.be/~dvermeir/manuals/uintro/uintro.html`](https://tinf2.vub.ac.be/~dvermeir/manuals/uintro/uintro.html)](lec07/filetable.gif){width=80%}
 
 Each process has its own _file descriptor (FD) table_. File descriptor `N` in _process A_ can refer to a different file than file descriptor `N` in _process B_.
 
 ## Low-Level I/O: File Descriptors vs. Descriptions
 
-![Mapping between file descriptors and file descriptions](figures/file_descriptors.svg){width=90%}
+![Mapping between file descriptors and file descriptions](lec07/file_descriptors.svg){width=90%}
 
 ## Low-Level I/O: `exec` and File Descriptors
 

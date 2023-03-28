@@ -45,7 +45,7 @@ int main() {
 
 ---
 
-![memory model](figures/memory_model.svg){width=62%}
+![memory model](lec05/memory_model.svg){width=62%}
 
 ## Dynamic Memory: Allocation
 
@@ -144,7 +144,7 @@ printf("String = %s,  Address = %u\n", str, str);
 
 ## Dynamic Memory: Leaks
 
-![it's very relatable](figures/free_realestate.jpg){width=78%}
+![it's very relatable](lec05/free_realestate.jpg){width=78%}
 
 ## Dynamic Memory: Freeing
 

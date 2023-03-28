@@ -90,7 +90,7 @@ We were planning to tell a UDP joke on this slide...
 
 ## Networks: Classic Bad Jokes
 
-![But we weren't sure if you would get it.](figures/eel.jpg){height=80%}
+![But we weren't sure if you would get it.](lec10/eel.jpg){height=80%}
 
 ## Networks: CSC209 vs. CSC\*58
 
@@ -138,7 +138,7 @@ You may test your client and server programs by running both on the same machine
   needs to communicate with another program on the same computer
 - `localhost` is a _hostname_ "aliased" to `127.0.0.1`
 
-![no place like `127.0.0.1`](figures/home.jpg){width=50%}
+![no place like `127.0.0.1`](lec10/home.jpg){width=50%}
 
 ## Networks: TCP and UDP Ports
 

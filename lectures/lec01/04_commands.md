@@ -8,7 +8,7 @@ Look these up in the man pages for practice!
 
 ## Commands: `man` pages $(\beta)$
 
-![how it feels when you man](figures/man_answer.jpeg){width=275}
+![how it feels when you man](lec01/man_answer.jpeg){width=275}
 
 ## Commands: `man` pages $(\beta)$
 
@@ -27,7 +27,7 @@ Look these up in the man pages for practice!
 
 Even the `man` command has its own man page: `man man`
 
-![a manual for man](figures/man_man.jpeg){width=275}
+![a manual for man](lec01/man_man.jpeg){width=275}
 
 You likely won't use any special options, aside from `man -k` or `man -K` (to search); `man man-pages` will be more generally informative.
 

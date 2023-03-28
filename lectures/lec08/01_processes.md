@@ -20,7 +20,7 @@ A **program** is executable file on disk (either source code or compiled machine
 
 Processes can be running, ready or blocked.
 
-![processes grouped by states](figures/proc1.jpg){width=80%}
+![processes grouped by states](lec08/proc1.jpg){width=80%}
 
 ### Currently-Running Processes
 
@@ -30,7 +30,7 @@ Try `pstree` from `bash` to print the tree of currently-running processes
 
 Processes can be running, ready or blocked.
 
-![what the states mean](figures/proc2.jpg){width=80%}
+![what the states mean](lec08/proc2.jpg){width=80%}
 
 ### Currently-Running Processes
 
@@ -129,7 +129,7 @@ The `wait()` system call waits for one of the children of the calling process to
 
 ## File Descriptors vs. File Descriptions
 
-![Mapping between file descriptors and file descriptions](figures/file_descriptors.svg){width=85%}
+![Mapping between file descriptors and file descriptions](lec07/file_descriptors.svg){width=85%}
 
 File descriptors in different processes may refer to the same _open file description_ in OS's _open file table_.
 

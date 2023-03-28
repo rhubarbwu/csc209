@@ -14,7 +14,7 @@ void _exit(int status);
 
 A _process exit status_ is saved to be reported back to the parent process via `wait` or `waitpid`. If the program exited, this status includes as its low-order 8 bits the _program exit status_.
 
-![](figures/exitstatus.svg){width=90%}
+![](lec08/exitstatus.svg){width=90%}
 
 [Source: The GNU C Library](https://www.gnu.org/software/libc/manual/html_node/Termination-Internals.html)
 

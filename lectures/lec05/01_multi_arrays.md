@@ -27,7 +27,7 @@ for (; p < rubiks_face[k] + 2; p++) *p = Y;
 
 ## Multidimensional Arrays: Row-Major Order
 
-![row-major order of a 3x3 matrix](figures/row-major.jpg){width=50%}
+![row-major order of a 3x3 matrix](lec03/row-major.jpg){width=50%}
 
 Although we visualize two-dimensional arrays as tables, that’s not the way they’re actually stored in computer memory. C stores arrays in _row-major order_, with row 0 first, then row 1, and so forth.
 

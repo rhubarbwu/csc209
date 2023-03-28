@@ -2,11 +2,11 @@
 
 ## Pipes: Unidirectional vs. Bidirectional Communication
 
-![](figures/pipes.svg)
+![](lec10/pipes.svg)
 
 ## Sockets
 
-![](figures/sockets.svg)
+![](lec10/sockets.svg)
 
 - A server must have a _listener socket_ to accept new connections
 - A separate socket is created to communicate with each client
@@ -58,7 +58,7 @@ Recall the system calls `read`/`write`/`close` from `unistd.h`; you use them her
 
 ## Sockets: The Server-Client Model
 
-![](figures/socket_syscalls.svg)
+![](lec10/socket_syscalls.svg)
 
 ## Sockets: Identifying & Multiplexing
 

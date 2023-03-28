@@ -15,7 +15,7 @@ You might recall that in the UNIX shell, we also used "pipes". Those (using the 
 
 A pipe `p` has two ends, a read end `p[0]` and a write end `p[1]`.
 
-![pipes from/to a process](figures/pipes.jpg){width=65%}
+![pipes from/to a process](lec09/pipes.jpg){width=65%}
 
 These two ends are typically used on different processes, such as a parent and its child, or related children processes.
 

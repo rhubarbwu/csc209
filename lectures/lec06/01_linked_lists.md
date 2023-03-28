@@ -1,6 +1,6 @@
 # Linked-Lists
 
-![Source: [`www.educative.io`](https://www.educative.io/)](figures/ll.png){width=75%}
+![Source: [`www.educative.io`](https://www.educative.io/)](lec06/ll.png){width=75%}
 
 A very common data structure that maintains ordering with easy insertions/deletions is the linked-list (LL).
 

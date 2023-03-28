@@ -2,7 +2,7 @@
 
 ## TCP/IP Model
 
-![Layers in the TCP/IP Model](figures/tcpip.svg){width=95%}
+![Layers in the TCP/IP Model](lec10/tcpip.svg){width=95%}
 
 ## TCP/IP: Layers
 

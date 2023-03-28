@@ -65,7 +65,7 @@ char *strdup(const char *str1);
 
 ## Strings Manipulation: Memory Errors
 
-![you hate to see it](figures/printf-string.jpeg){width=95%}
+![you hate to see it](lec06/printf-string.jpeg){width=95%}
 
 ## Strings Manipulation: Manipulation & Memory Safety
 
@@ -117,7 +117,7 @@ Also from `man gets` (Mac):
 
 <!-- Figure with Drake, unsafe string functions on top half (strcpy, strcat, strlen, sprintf, gets: Drake disapproves) and same versions with 'n' below strncpy, strncat, strnlen, snprintf, fgets (Drake approves) -->
 
-![What Drake thinks about `strings.h`/`stdio.h`.](figures/safe-functions.png){width=75%}
+![What Drake thinks about `strings.h`/`stdio.h`.](lec06/safe-functions.png){width=75%}
 
 ## Strings Manipulation: Safe(r) Library Functions
 
@@ -141,7 +141,7 @@ Newer versions and languages sometimes (re-)implement safer functions. For examp
 
 ## Strings Manipulation: Exercises in Safety (1)
 
-![How about these?](figures/strcpy-meme.png){width=70%}
+![How about these?](lec06/strcpy-meme.png){width=70%}
 
 ## Strings Manipulation: Exercises in Safety (1)
 
@@ -168,7 +168,7 @@ strncat(dest, src, MAXS - 1);
 
 ## Strings Manipulation: Exercises in Safety (1)
 
-**Is this safe?** No.\_
+**Is this safe?** _No._
 
 ```c
 char *dest;
