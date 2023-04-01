@@ -1,0 +1,61 @@
+TIME=1 sh counting_time.sh ./count 1
+0: using 1 thread(s) each counting 1073741824
+real    0m2.571s
+user    0m2.566s
+sys     0m0.000s
+1: using 2 thread(s) each counting 536870912
+real    0m1.419s
+user    0m2.827s
+sys     0m0.003s
+2: using 4 thread(s) each counting 268435456
+real    0m0.777s
+user    0m3.051s
+sys     0m0.003s
+3: using 8 thread(s) each counting 134217728
+real    0m0.592s
+user    0m4.439s
+sys     0m0.007s
+4: using 16 thread(s) each counting 67108864
+real    0m0.596s
+user    0m4.386s
+sys     0m0.003s
+5: using 32 thread(s) each counting 33554432
+real    0m0.579s
+user    0m4.461s
+sys     0m0.010s
+6: using 64 thread(s) each counting 16777216
+real    0m0.618s
+user    0m4.475s
+sys     0m0.010s
+7: using 128 thread(s) each counting 8388608
+real    0m0.599s
+user    0m4.555s
+sys     0m0.014s
+8: using 256 thread(s) each counting 4194304
+real    0m0.619s
+user    0m4.552s
+sys     0m0.030s
+9: using 512 thread(s) each counting 2097152
+real    0m0.673s
+user    0m4.762s
+sys     0m0.043s
+10: using 1024 thread(s) each counting 1048576
+real    0m0.749s
+user    0m4.628s
+sys     0m0.126s
+11: using 2048 thread(s) each counting 524288
+real    0m0.655s
+user    0m4.514s
+sys     0m0.205s
+12: using 4096 thread(s) each counting 262144
+real    0m0.734s
+user    0m4.481s
+sys     0m0.403s
+13: using 8192 thread(s) each counting 131072
+real    0m0.903s
+user    0m4.360s
+sys     0m0.755s
+14: using 16384 thread(s) each counting 65536
+real    0m1.091s
+user    0m4.541s
+sys     0m1.321s
