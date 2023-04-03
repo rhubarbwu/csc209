@@ -7,9 +7,9 @@ Threads can easily share information using global variables. Consider this examp
 \small
 
 ```c
-int glob = 0, N = 1073741824;
+int S = 0, N = 1073741824;
 void *increment_by_one(void *_) {
-    for (int j = 0; j < N; j++) { long local = glob; local++; glob = local; }
+    for (int j = 0; j < N; j++) { long local = S; local++; S = local; }
 }
 int main() { increment_by_one(NULL); }
 ```
@@ -19,7 +19,7 @@ If we're impatient, we can dispatch `T` threads to compute the sum in parallel.
 \small
 
 ```c
-int glob = 0, N = 1073741824;
+int S = 0, N = 1073741824;
 int main(int argc, char **argv) {
     int T = atoi(argv[1]); N /= T;
     pthread_t TIDs[T];
@@ -34,28 +34,28 @@ We are calling `pthread_join()`, so this is reliable and consistent, right?
 
 ## Safety: Exploiting Parallelism is Risky!
 
-No! Absolutely not. Consider many threads are probably running `increment_by_one()` at once, accessing `glob` concurrently. In other words, `glob` can have multiple "writers" and "readers" at the same time.
+No! Absolutely not. Consider many threads are probably running `increment_by_one()` at once, accessing `S` concurrently. In other words, `S` can have multiple "writers" and "readers" at the same time.
 
 \small
 
 ```c
 void *increment_by_one(void *_) {
     for (int j = 0; j < N; j++) {
-        long local = glob;  // read from glob
+        long local = S;  // read from S
         local++;
-        glob = local;       // write to glob
+        S = local;       // write to S
     }
 }
 ```
 
 Here's a possible (problematic execution path) if there are `T`=2 threads:
 
-1. Thread 1 increments `glob` $2000$ times.
-2. On iteration `j=2001`, it obtains the value of `glob`, but then...
-3. Thread 2 increments `glob` $536870912$ times, and terminates.
-4. Now thread 1 takes over, but writes $2001$ into `glob`!
+1. Thread 1 increments `S` $2000$ times.
+2. On iteration `j=2001`, it obtains the value of `S`, but then...
+3. Thread 2 increments `S` $536870912$ times, and terminates.
+4. Now thread 1 takes over, but writes $2001$ into `S`!
 
-`glob` won't always be the expected result $1073741824$; you can imagine it gets worse with more threads! If the behaviour is inconsistent/unpredictable, we call this a _race condition_.
+`S` won't always be the expected result $1073741824$; you can imagine it gets worse with more threads! If the behaviour is inconsistent/unpredictable, we call this a _race condition_.
 
 ## Safety: Critical Sections
 
@@ -122,11 +122,11 @@ The terms "mutex" and "lock" are often used interchangeably. Whether a mutex/loc
 ```c
 // mtx can be a global mutex            // or a local lock
 void *increment_by_one(void *_) {       void *increment_by_part(void *_) {
-    for (int j = 0; j < N; j++) {           long partial = 0;
+    for (int j = 0; j < N; j++) {           long local = 0;
         pthread_mutex_lock(&mtx);           for (int j = 0; j < N; j++)
-        long local = glob;                      partial += 1;
+        long local = S;                      local += 1;
         local++;                            pthread_mutex_lock(&mtx);
-        glob = local;                       S += partial;
+        S = local;                       S += local;
         pthread_mutex_unlock(&mtx);         pthread_mutex_unlock(&mtx);
     }                                   }
 } // which function does it better?     // look at critical sections
@@ -148,12 +148,12 @@ To write versions of your code with/out mutexes, you might wrap (macro-)conditio
 
 ```c
 void *increment_by_part(void *_) {
-    long partial = 0;
-    for (int j = 0; j < N; j++) partial += 1;
+    long local = 0;
+    for (int j = 0; j < N; j++) local += 1;
 #ifdef MUTEX
     pthread_mutex_lock(&mtx);
 #endif
-    S += partial;
+    S += local;
 #ifdef MUTEX
     pthread_mutex_unlock(&mtx);
 #endif
@@ -174,6 +174,10 @@ $ gcc -DMUTEX -pthread -o counting counting.c   # with mutexes
 
 See if there are any changes in accuracy or efficiency...
 
+## Synchronization: But Wait! There's more!
+
+![finding out there's more than mutexes](lec12/vince-cv.jpg){height=82%}
+
 ## Synchronization: Conditional Variables (CVs)
 
 A _condition variable_ (CV) allows threads to notify others of changes in resources. A CV also allows threads to block waiting for such notification. Without a CV, threaded programs can be inefficient (e.g. looping to poll a variable).
@@ -191,16 +195,22 @@ A CV has an associated mutex, which must be locked by a thread before it calls `
 - `pthread_cond_wait()` unlocks the mutex, blocks the thread, and (when the thread is later signaled) relocks the mutex.
 - Unlocking the mutex and blocking the thread are _atomic_: no other thread can `signal` the CV between these two operations.
 
+## Synchronization: And more...
+
+![finding out there's more than mutexes and CVs](lec12/vince-sem.jpg){height=82%}
+
 ## Synchronization: Semaphores
 
-\small
+![[`open4tech.com/rtos-mutex-and-semaphore-basics/`](https://open4tech.com/rtos-mutex-and-semaphore-basics/)](lec12/sem.jpg){height=50%}
 
 Semaphores are like CVs with a counter. In other words, instead of a binary locking status, a semaphore tracks some counter variable, essentially a multiplexing lock.
 
 - Often tracks how many threads/processes are currently in a critical section.
 - But it could be used to represent anything else the programmer wants.
 
-This is too much...
+## Synchronization: Okay Stop!
+
+![](lec12/sweat.jpg){width=100%}
 
 ## Synchronization: Not a Silver Bullet do (Synchronized) Threads Make
 
@@ -222,21 +232,39 @@ Ideally, we synchronize our process/threads across their shared resources proper
 
 ## Parallel Computing: Beyond CSC209
 
-There's so much to parallel programming in further reading or courses. Topics of interest might be OpenCL and CUDA for GPUs and cloud computing solutions. And development of new architectures, platforms, and algorithms is ongoing!
+\small
 
-### CSC367: Parallel Programming
+Much parallel programming -- CUDA, the cloud, ASICs, etc. -- awaits! And development of new architectures, platforms, and algorithms is ongoing in both application and research!
+
+\singlespacing
+
+\vspace{-1.5em}
+
+### [CSC367: Parallel Programming](https://utm.calendar.utoronto.ca/course/csc367h5)
 
 \footnotesize
 
 Topics include computer instruction execution, **instruction-level parallelism**, memory system performance, task and data **parallelism**, **parallel models** (**shared memory**, message passing), **synchronization**, scalability and Amdahl's law, Flynn taxonomy, vector processing and **parallel computing architectures**.
 
-### CSC369: Operating Systems
+\vspace{-.3em}
+
+### [CSC369: Operating Systems](https://utm.calendar.utoronto.ca/course/csc369h5)
 
 \footnotesize
 
 The operating system as a control program and as a resource allocator. **Processes and threads, concurrency (synchronization/mutual exclusion/deadlock)**, processor, scheduling, memory management, file systems, and protection.
 
-### ECE419: Distributed Computing
+\vspace{-.3em}
+
+### [CSC409: Scalable Computing](https://utm.calendar.utoronto.ca/course/csc409h5)
+
+\footnotesize
+
+We investigate computation in the large [...] to solve complex problems involving big data, serving large collections of users, in high availability, global settings. [...] Topics include caching, load balancing, **parallel computing and models**, redundancy, failover strategies, use of **GPUs**, and noSQL databases.
+
+\vspace{-.3em}
+
+### [ECE419: Distributed Computing](https://engineering.calendar.utoronto.ca/course/ece419h1)
 
 \footnotesize
 

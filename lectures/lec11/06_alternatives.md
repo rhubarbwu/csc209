@@ -12,7 +12,7 @@ int ppoll(struct pollfd *fds, nfds_t nfds, // analog to pselect()
         const struct timespec *tmo_p, const sigset_t *sigmask);
 ```
 
-`select()` iterates over the array of all possible FDs (up to `nfds`) while only the active FDs are polled by `poll()`. By definition, $\mathcal O({\tt poll}) \leq \mathcal O({\tt select})$ and in most cases $\mathcal O({\tt poll}) << \mathcal O({\tt select})$ because most FDs between `0` and `nfds` are inactive.
+`select()` iterates over the array of all possible FDs (up to `nfds`) while only the active FDs are polled by `poll()`. By definition, $\mathcal O({\tt poll}) \leq \mathcal O({\tt select})$ and in most cases $\mathcal O({\tt poll}) \ll \mathcal O({\tt select})$ because most FDs between `0` and `nfds` are inactive.
 
 ### Portability & Modernity
 

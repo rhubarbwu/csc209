@@ -37,14 +37,14 @@ Read bytes, check for errors, and null-terminate the string.
 ```c
 void myread(struct client *p) {
     int room = sizeof(p->buf) - p->inbuf;
-    if (room <= 1) {} // clean up this client: buffer full
+    if (room <= 1) { ... } // clean up this client: buffer full
 
     char *startbuf = p->buf + p->inbuf;
     char *tok, *cr, *lf;
     int crlf;
 
     int len = read(p->fd, startbuf, room - 1);
-    if (len <= 0) {} // clean up this client: eof or error
+    if (len <= 0) { ... } // clean up this client: eof or error
 
     p->inbuf += len;
     p->buf[p->inbuf] = '\0';
@@ -68,7 +68,7 @@ void myread(struct client *p) {
     if (!lf && !cr) return; // no complete line
 
     tok = strtok(p->buf, "\r\n");
-    if (tok) {} // use tok (complete string)
+    if (tok) { ... } // use tok (complete string)
 
     // compute how many bytes we're removing
     if (!lf) crlf = cr - p->buf;
@@ -76,7 +76,7 @@ void myread(struct client *p) {
     else crlf = ((lf > cr) ? lf : cr) - p->buf;
     crlf++; // include the CRLF
 
-    p->inbuf -= crlf; // shft the remainder towards the head
+    p->inbuf -= crlf; // shift the remainder towards the head
     memmove(p->buf, p->buf + crlf, p->inbuf);
 }
 ```

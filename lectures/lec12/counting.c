@@ -37,16 +37,16 @@ void *increment_by_one(void *_) {
 }
 
 int main(int argc, char **argv) {
-// #ifdef MUTEX
-//     int status = pthread_mutex_init(&mtx, NULL);
-//     if (status != 0) {
-//         perror("pthread_mutex_init");
-//         printf("failed to create mutex :C\n");
-//     } else
-//         printf("running with mutex :)\n");
-// #else
-//     printf("running without mutex :(\n");
-// #endif
+#ifdef MUTEX
+    int status = pthread_mutex_init(&mtx, NULL);
+    if (status != 0) {
+        perror("pthread_mutex_init");
+        printf("failed to create mutex :C\n");
+    } else
+        printf("running with mutex :)\n");
+#else
+    printf("running without mutex :(\n");
+#endif
 
     T = atoi(argv[1]);
     N = atoi(argv[2]);
@@ -56,11 +56,11 @@ int main(int argc, char **argv) {
     int P = atoi(argv[3]);
 
     for (int t = 0; t < T; t++)
-        pthread_create(&TIDs[t], NULL, P ? increment_by_one : increment_by_part, NULL);
+        pthread_create(&TIDs[t], NULL, P ? increment_by_part : increment_by_one, NULL);
 
     for (int t = 0; t < T; t++)
         pthread_join(TIDs[t], NULL);
 
-    // printf("threads summed to %d\n", S);
+    printf("threads summed to %d\n", S);
     return 0;
 }

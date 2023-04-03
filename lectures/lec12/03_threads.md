@@ -11,11 +11,11 @@ Were processes not good enough?
 - `fork()` is a heavyweight system call.
 - Each process gets its own memory address space.
 - Context-switching and synchronizing between processes are expensive.
-- Communication between processes requires external kernel constructs which are also expensive
-
-  - We're talking about pipes, or sockets, or signals, etc.
+- Communication between processes requires external kernel constructs (pipes, sockets, signals, etc.) which are also expensive.
 
 So, what if we had multiple _threads_ of execution, all within a single process?
+
+![how drake feels about processes and threads](lec12/drake.jpg){height=45%}
 
 ## Threads: An Introduction
 
@@ -44,7 +44,7 @@ The number of threads "on a CPU" refers to the number of high-level tasks that y
 
 ## Multiprocessing vs. Multithreading
 
-Both processes and threads perform multiple tasks conrurently. Here's how...
+Both processes and threads perform multiple tasks concurrently. Here's how...
 
 | Attribute            | Processes            | Threads    |
 | -------------------- | -------------------- | ---------- |
@@ -235,7 +235,7 @@ What kinds of parallelism are exhibited in these models?
 We must be careful when multithreading.
 
 - A bug in one thread can damage other threads.
-- Its difficult to use signals with threads.
+- It's difficult to use signals with threads.
 - All threads in a process must run the same program.
 - Only thread-safe functions can be used.
 

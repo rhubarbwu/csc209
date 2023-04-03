@@ -65,7 +65,7 @@ char *strdup(const char *str1);
 
 ## Strings Manipulation: Memory Errors
 
-![you hate to see it](lec06/printf-string.jpeg){width=95%}
+![you hate to see it](lec06/printf-string.jpeg){width=97%}
 
 ## Strings Manipulation: Manipulation & Memory Safety
 
@@ -141,7 +141,7 @@ Newer versions and languages sometimes (re-)implement safer functions. For examp
 
 ## Strings Manipulation: Exercises in Safety (1)
 
-![How about these?](lec06/strcpy-meme.png){width=70%}
+![How about these?](lec06/strcpy-meme.png){width=60%}
 
 ## Strings Manipulation: Exercises in Safety (1)
 
@@ -219,14 +219,14 @@ printf("Length of string str1 %d\n", strnlen(str1, 30)); // safe
 printf("Length of string str1 %d\n", strnlen(str1, 10)); // safe
 
 char str2[6] = "csc209";
-// some other code here. might've removed the \0 from str2!
+// some other code here; might've removed the \0 from str2!
 int b;
-scanf("%d", &b); // unsafe: never trust external input
+scanf("%d", &b); // unsafe; never trust external input
 printf("Length of string str2 %d\n", strnlen(str2, b));
 
 char buf[209] = {'\0'};
 printf("Enter your name and press <Enter>\n");
-gets(buf); // unsafe: accepts infinite stream
+gets(buf); // unsafe; accepts infinite stream
 ```
 
 ## Strings Manipulation: Example (`minigrep.c`)

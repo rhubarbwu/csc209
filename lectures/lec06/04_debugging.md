@@ -100,6 +100,8 @@ You can use `help` to see more instructions and `help all` for a list of command
 
 Try debugging `minigrep.c` to fix it!
 
+\small
+
 ```sh
 # gdb is enabled in some other compilers too!
 $ clang -g -o minigrep minigrep.c
@@ -107,6 +109,8 @@ $ clang -g -o minigrep minigrep.c
 $ gdb --args minigrep minigrep.c while
 $ gdb --args minigrep minigrep.c \#define
 ```
+
+\normalsize
 
 - What breakpoints might be interesting?
 - Which variables/expressions?
@@ -124,6 +128,8 @@ Full code: [`github.com/rhubarbwu/csc209/blob/master/lectures/lec06/minigrep.c`]
 
 Try debugging `minigrep.c` to fix it!
 
+\small
+
 ```sh
 # gdb is enabled in some other compilers too!
 $ clang -g -o minigrep minigrep.c
@@ -132,10 +138,12 @@ $ gdb --args minigrep minigrep.c while
 $ gdb --args minigrep minigrep.c \#define
 ```
 
+\normalsize
+
 - What breakpoints might be interesting? `break 18`, `break 29`.
 - Which variables/expressions? At `29`: `line`, `line+i`, `pattern` and/or `result`.
 
-/small
+\small
 
 Full code: [`github.com/rhubarbwu/csc209/blob/master/lectures/lec06/minigrep.c`](https://github.com/rhubarbwu/csc209/blob/master/lectures/lec06/minigrep.c)
 
@@ -255,6 +263,6 @@ Conversely, the more optimization you include (`-O1`, `-O2`, `-O3`, etc.), the l
 
 ### Example: Leaky Linked-List
 
-/small
+\small
 
 Full code: [`github.com/rhubarbwu/csc209/blob/master/lectures/lec06/leakyll.c`](https://github.com/rhubarbwu/csc209/blob/master/lectures/lec06/leakyll.c)
