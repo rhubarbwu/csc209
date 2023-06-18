@@ -48,7 +48,7 @@ void *increment_by_one(void *_) {
 }
 ```
 
-Here's a possible (problematic execution path) if there are `T`=2 threads:
+Here's a possible (problematic) execution path if there are `T`=2 threads:
 
 1. Thread 1 increments `S` $2000$ times.
 2. On iteration `j=2001`, it obtains the value of `S`, but then...
@@ -93,7 +93,7 @@ int pthread_mutex_destroy(pthread_mutex_t *mp);
 
 \normalsize
 
-A _mutual exclusion (mutex)_ can ensure that only thread accesses a variable at a time.
+A _mutual exclusion (mutex)_ ensures only one thread can access a variable at a time.
 
 - A mutex is always in one of two states: locked or unlocked.
 - When unlocked, any thread can lock (often phrase "acquire lock on") the mutex.
